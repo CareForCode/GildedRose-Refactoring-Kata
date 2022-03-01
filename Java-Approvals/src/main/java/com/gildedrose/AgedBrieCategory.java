@@ -5,11 +5,11 @@ public class AgedBrieCategory implements Category {
     @Override
     public void handle(Item item) {
 
-        item.sellIn = item.sellIn - 1;
+        SellInManager.decreaseSellIn(item);
 
         QualityManager.incrementQuality(item);
 
-        if (item.sellIn < 0) {
+        if (SellInManager.isOutdated(item)) {
             QualityManager.incrementQuality(item);
         }
     }
