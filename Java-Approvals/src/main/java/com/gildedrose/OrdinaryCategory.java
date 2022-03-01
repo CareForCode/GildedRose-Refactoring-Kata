@@ -9,9 +9,7 @@ public class OrdinaryCategory implements Category {
         item.sellIn = item.sellIn - 1;
 
         if (item.sellIn < 0) {
-            if (item.quality > 0) {
-                decreaseQuality(item);
-            }
+            decreaseQuality(item);
         }
     }
 
