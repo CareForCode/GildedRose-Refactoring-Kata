@@ -7,10 +7,10 @@ public class AgedBrieCategory implements Category {
 
         item.sellIn = item.sellIn - 1;
 
-        item.incrementQuality();
+        QualityManager.increment(item);
 
         if (item.sellIn < 0) {
-            item.incrementQuality();
+            QualityManager.increment(item);
         }
     }
 }

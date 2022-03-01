@@ -4,12 +4,12 @@ public class OrdinaryCategory implements Category {
 
     @Override
     public void handle(Item item) {
-        item.decreaseQuality();
+        QualityManager.decrease(item);
 
-        item.decreaseSellIn();
+        item.sellIn = item.sellIn - 1;
 
         if (item.sellIn < 0) {
-            item.decreaseQuality();
+            QualityManager.decrease(item);
         }
     }
 
