@@ -11,9 +11,7 @@ public class BackstagePassesCategory implements Category {
         }
 
         if (item.sellIn < 6) {
-            if (item.quality < 50) {
-                incrementQuality(item);
-            }
+            incrementQuality(item);
         }
 
         item.sellIn = item.sellIn - 1;
