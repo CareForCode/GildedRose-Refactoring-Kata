@@ -6,7 +6,7 @@ public class OrdinaryCategory implements Category {
     public void handle(Item item) {
         item.decreaseQuality();
 
-        item.sellIn = item.sellIn - 1;
+        item.decreaseSellIn();
 
         if (item.sellIn < 0) {
             item.decreaseQuality();
