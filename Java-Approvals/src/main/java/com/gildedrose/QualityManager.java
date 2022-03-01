@@ -4,11 +4,11 @@ public class QualityManager {
     public QualityManager() {
     }
 
-    static void increment(Item item) {
+    static void incrementQuality(Item item) {
         item.quality = Math.min(50, item.quality + 1);
     }
 
-    static void decrease(Item item) {
+    static void decreaseQuality(Item item) {
         item.quality = Math.max(0, item.quality - 1);
     }
 

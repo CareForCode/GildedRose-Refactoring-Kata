@@ -4,14 +4,14 @@ public class BackstagePassesCategory implements Category {
 
     @Override
     public void handle(Item item) {
-        QualityManager.increment(item);
+        QualityManager.incrementQuality(item);
 
         if (item.sellIn < 11) {
-            QualityManager.increment(item);
+            QualityManager.incrementQuality(item);
         }
 
         if (item.sellIn < 6) {
-            QualityManager.increment(item);
+            QualityManager.incrementQuality(item);
         }
 
         decreaseSellIn(item);
