@@ -12,21 +12,22 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
+            Category category;
             switch (item.name) {
                 case BACKSTAGE_PASSES:
-                    new BackstagePassesCategory().handle(item);
+                    category = new BackstagePassesCategory();
                     break;
                 case SULFURAS:
-                    new SulfurasCategory().handle(item);
+                    category = new SulfurasCategory();
                     break;
                 case AGED_BRIE:
-                    new AgedBrieCategory().handle(item);
+                    category = new AgedBrieCategory();
                     break;
                 default:
-                    new OrdinaryCategory().handle(item);
+                    category = new OrdinaryCategory();
                     break;
             }
-
+            category.handle(item);
         }
     }
 
