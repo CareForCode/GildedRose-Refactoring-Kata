@@ -14,15 +14,11 @@ public class BackstagePassesCategory implements Category {
             QualityManager.incrementQuality(item);
         }
 
-        decreaseSellIn(item);
+        SellInManager.decreaseSellIn(item);
 
         if (item.sellIn < 0) {
             QualityManager.invalidateQuality(item);
         }
-    }
-
-    private void decreaseSellIn(Item item) {
-        item.sellIn = item.sellIn - 1;
     }
 
 }
