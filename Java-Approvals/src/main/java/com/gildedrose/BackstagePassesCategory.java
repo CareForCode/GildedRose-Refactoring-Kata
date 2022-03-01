@@ -4,19 +4,17 @@ public class BackstagePassesCategory implements Category {
 
     @Override
     public void handle(Item item) {
-        if (item.quality < 50) {
-            incrementQuality(item);
+        incrementQuality(item);
 
-            if (item.sellIn < 11) {
-                if (item.quality < 50) {
-                    incrementQuality(item);
-                }
+        if (item.sellIn < 11) {
+            if (item.quality < 50) {
+                incrementQuality(item);
             }
+        }
 
-            if (item.sellIn < 6) {
-                if (item.quality < 50) {
-                    incrementQuality(item);
-                }
+        if (item.sellIn < 6) {
+            if (item.quality < 50) {
+                incrementQuality(item);
             }
         }
 
