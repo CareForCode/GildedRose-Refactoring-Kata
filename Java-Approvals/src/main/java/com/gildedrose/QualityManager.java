@@ -4,7 +4,7 @@ public class QualityManager {
     public QualityManager() {
     }
 
-    static void incrementQuality(Item item) {
+    static void increment(Item item) {
         item.quality = Math.min(50, item.quality + 1);
     }
 }
