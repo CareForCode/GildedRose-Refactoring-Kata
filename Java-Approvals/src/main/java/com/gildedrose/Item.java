@@ -14,8 +14,24 @@ public class Item {
         this.quality = quality;
     }
 
-   @Override
+    void invalidateQuality() {
+        this.quality = 0;
+    }
+
+    void decreaseQuality() {
+        this.quality = Math.max(0, this.quality - 1);
+    }
+
+    void incrementQuality() {
+        this.quality = Math.min(50, this.quality + 1);
+    }
+
+    @Override
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
+    }
+
+    void decreaseSellIn() {
+        sellIn = sellIn - 1;
     }
 }
