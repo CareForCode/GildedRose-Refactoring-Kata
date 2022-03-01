@@ -8,7 +8,7 @@ public class OrdinaryCategory implements Category {
 
         SellInManager.decreaseSellIn(item);
 
-        if (item.sellIn < 0) {
+        if (SellInManager.isOutdated(item)) {
             QualityManager.decreaseQuality(item);
         }
     }
