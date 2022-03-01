@@ -9,13 +9,13 @@ public class BackstagePassesCategory implements Category {
 
             if (item.sellIn < 11) {
                 if (item.quality < 50) {
-                    item.quality = item.quality + 1;
+                    incrementQuality(item);
                 }
             }
 
             if (item.sellIn < 6) {
                 if (item.quality < 50) {
-                    item.quality = item.quality + 1;
+                    incrementQuality(item);
                 }
             }
         }
