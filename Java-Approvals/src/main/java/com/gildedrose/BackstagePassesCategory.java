@@ -2,18 +2,16 @@ package com.gildedrose;
 
 public class BackstagePassesCategory implements Category {
 
-    private final QualityManager qualityManager = new QualityManager();
-
     @Override
     public void handle(Item item) {
-        qualityManager.incrementQuality(item);
+        QualityManager.incrementQuality(item);
 
         if (item.sellIn < 11) {
-            qualityManager.incrementQuality(item);
+            QualityManager.incrementQuality(item);
         }
 
         if (item.sellIn < 6) {
-            qualityManager.incrementQuality(item);
+            QualityManager.incrementQuality(item);
         }
 
         item.sellIn = item.sellIn - 1;
