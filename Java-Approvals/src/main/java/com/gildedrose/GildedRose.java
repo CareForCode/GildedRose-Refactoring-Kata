@@ -17,7 +17,7 @@ class GildedRose {
                     new BackstagePassesCategory().handle(item);
                     break;
                 case SULFURAS:
-                    handleSulfuras();
+                    new SulfurasCategory().handle(item);
                     break;
                 case AGED_BRIE:
                     new AgedBrieCategory().handle(item);
@@ -42,10 +42,6 @@ class GildedRose {
                 item.quality = item.quality - 1;
             }
         }
-    }
-
-    private void handleSulfuras() {
-        ;
     }
 
 }
