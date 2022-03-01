@@ -5,7 +5,7 @@ public class BackstagePassesCategory implements Category {
     @Override
     public void handle(Item item) {
         if (item.quality < 50) {
-            item.quality = item.quality + 1;
+            incrementQuality(item);
 
             if (item.sellIn < 11) {
                 if (item.quality < 50) {
@@ -25,5 +25,9 @@ public class BackstagePassesCategory implements Category {
         if (item.sellIn < 0) {
             item.quality = 0;
         }
+    }
+
+    private void incrementQuality(Item item) {
+        item.quality = Math.min(50, item.quality + 1);
     }
 }
