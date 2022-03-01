@@ -4,9 +4,7 @@ public class OrdinaryCategory implements Category {
 
     @Override
     public void handle(Item item) {
-        if (item.quality > 0) {
-            decreaseQuality(item);
-        }
+        decreaseQuality(item);
 
         item.sellIn = item.sellIn - 1;
 
