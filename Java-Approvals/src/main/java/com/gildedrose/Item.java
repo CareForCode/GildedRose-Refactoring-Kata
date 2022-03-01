@@ -26,12 +26,12 @@ public class Item {
         this.quality = Math.min(50, this.quality + 1);
     }
 
+    void decreaseSellIn() {
+        sellIn = sellIn - 1;
+    }
+
     @Override
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
-    }
-
-    void decreaseSellIn() {
-        sellIn = sellIn - 1;
     }
 }
