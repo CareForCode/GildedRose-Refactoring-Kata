@@ -6,11 +6,11 @@ public class BackstagePassesCategory implements Category {
     public void handle(Item item) {
         QualityManager.incrementQuality(item);
 
-        if (item.sellIn < 11) {
+        if (SellInManager.isSellInBeneath(item, 11)) {
             QualityManager.incrementQuality(item);
         }
 
-        if (item.sellIn < 6) {
+        if (SellInManager.isSellInBeneath(item, 6)) {
             QualityManager.incrementQuality(item);
         }
 
