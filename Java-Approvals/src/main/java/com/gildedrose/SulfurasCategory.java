@@ -3,5 +3,7 @@ package com.gildedrose;
 public class SulfurasCategory implements Category {
 
     @Override
-    public void handle(Item item) {}
+    public void handle(Item item) {
+        //do nothing
+    }
 }
